@@ -1,0 +1,380 @@
+@charset "utf-8";
+
+.index {
+    /*PC
+    ---------------------------------------------------------*/
+    /*全体*/
+    .box {
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        font-size: 60px;
+        border: none;
+        clear: both;
+    }
+
+    /*モノクロ画像のサイズ*/
+    .backimg {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*カラー画像のサイズ*/
+    .backimg_active {
+        width: 100%;
+        height: 100%;
+    }
+
+    .title {
+        position: absolute;/*絶対配置*/
+        color: white;/*文字は白に*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        font-size: 50%;
+    }
+
+
+    // /* 1段目（サイトの顔） */
+    // .top{
+    //     width: 100%;
+    //     height: 100vh;
+    //     background-image: url(img/top.jpg);
+    //     background-position: center center;
+    //     background-attachment: fixed;
+    // }      
+    
+    // /*iPadmini(横)
+    // -----------------------------------------*/
+    // @media only screen and (max-width: 1024px) {
+    //     /*全体*/
+    //     .box {
+    //         box-sizing: border-box;
+    //         text-align: center;
+    //         line-height: 50px;
+    //         font-weight: bold;
+    //         font-size: 60px;
+    //         border: none;
+    //         clear: both;
+    //     }
+
+    //     /*モノクロ画像のサイズ*/
+    //     .backimg {
+    //         width: 100%;
+    //         height: 100%;
+    //     }
+
+    //     /*カラー画像のサイズ*/
+    //     .backimg_active {
+    //         width: 100%;
+    //         height: 100%;
+    //     }
+
+    //     .title {
+    //         position: absolute;/*絶対配置*/
+    //         color: white;/*文字は白に*/
+    //         top: 50%;
+    //         left: 50%;
+    //         transform: translate(-50%, -50%);
+    //         margin: 0;
+    //         padding: 0;
+    //         font-size: 40%;
+    //     }
+
+
+    //     /* 1段目（サイトの顔） */
+    //     .top{
+    //         width: 100%;
+    //         height: 100vh;
+    //         background-image: url(img/top_tab.jpg);
+    //         background-position: center center;
+    //     }
+
+
+    //     /* 2段目（Kustom Paint, Pinstripe）*/
+    //     .kastomPaint {
+    //         position: relative;
+    //         float: left;
+    //         width: 60%;
+    //         height: 100%;
+
+    //         .backimg_active{
+    //             position: absolute;
+    //             left: 0;
+    //             top: 0;
+    //             opacity: 0;
+    //             transition: 0.5s; /*画像が入れ替わる速度*/
+    //         }
+
+    //         :hover .backimg_active {
+    //             opacity: 1;
+    //         }
+    //     }
+
+    //     .pinstripe {
+    //         position: relative;
+    //         float: right;
+    //         width: 40%;
+    //         height: 100%;
+
+    //         .backimg_active{
+    //             position: absolute;
+    //             left: 0;
+    //             top: 0;
+    //             opacity: 0;
+    //             transition: 0.5s;
+    //         }
+
+    //         :hover .backimg_active {
+    //             opacity: 1;
+    //         }
+    //     }
+
+
+    //     /* 3段目（Lettering, Massage Board, Other）*/
+    //     .lettering {
+    //         position: relative;
+    //         float: left;
+    //         width: 40%; 
+    //         height: 100%;
+
+    //         .backimg_active{
+    //             position: absolute;
+    //             left: 0;
+    //             top: 0;
+    //             opacity: 0;
+    //             transition: 0.5s;
+    //         }
+
+    //         :hover .backimg_active {
+    //             opacity: 1;
+    //         }
+    //     }
+
+    //     .massageBoard {
+    //         position: relative;
+    //         float: left;
+    //         width: 40%;
+    //         height: 100%; 
+            
+    //         .backimg_active{
+    //             position: absolute;
+    //             left: 0;
+    //             top: 0;
+    //             opacity: 0;
+    //             transition: 0.5s;
+    //         }
+
+    //         :hover .backimg_active {
+    //             opacity: 1;
+    //         }
+    //     }
+
+    //     .other {
+    //         position: relative;
+    //         float: left;
+    //         width: 20%;
+    //         height: 100%; 
+
+    //         .backimg_active{
+    //             position: absolute;
+    //             left: 0;
+    //             top: 0;
+    //             opacity: 0;
+    //             transition: 0.5s;
+    //         }
+
+    //         :hover .backimg_active {
+    //             opacity: 1;
+    //         }
+    //     }
+
+
+    //     /* 4段目（Online Shop, About）*/
+    //     .onlineShop {
+    //         position: relative;
+    //         float: left;
+    //         width: 60%;
+    //         height: 400px;
+    //     }
+        
+    //     .about {
+    //         position: relative;
+    //         float: left;
+    //         width: 40%;
+    //         height: 400px;
+    //         .title{
+    //             top: 30%;
+    //         }
+    //         .shop_text{
+    //             font-size: 25%;
+    //             line-height: 130%;
+    //             top: 60%;
+    //         }
+    //     }
+
+    // }
+
+
+    /*スマホ
+    -----------------------------------------*/
+    @media only screen and (max-width: 768px) {
+        /*全体*/
+        .box {
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 100%;
+            font-weight: 20%;
+            font-size: 30px;
+            border: none;
+            clear: both;
+        }
+
+        /*モノクロ画像のサイズ*/
+        .backimg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /*カラー画像のサイズ*/
+        .backimg_active {
+            width: 100%;
+            height: 100%;
+        }
+
+        .title {
+            position: absolute;/*絶対配置*/
+            color: white;/*文字は白に*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            padding: 0;
+            font-size: 70%;
+        }
+
+
+        /* 1段目（サイトの顔） */
+        .top{
+            width: 100%;
+            height: 100vh;
+            background-image: url(img/top_sp.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+
+        /* 2段目（Kustom Paint, Pinstripe）*/
+        .kastomPaint {
+            width: 100%;
+            height: 100%;
+
+            .backimg_active{
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: 0.5s; /*画像が入れ替わる速度*/
+            }
+
+            :hover .backimg_active {
+                opacity: 1;
+            }
+        }
+
+        .pinstripe {
+            width: 100%;
+            height: 100%;
+
+            .backimg_active{
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: 0.5s;
+            }
+
+            :hover .backimg_active {
+                opacity: 1;
+            }
+        }
+
+
+        /* 3段目（Lettering, Massage Board, Other）*/
+        .lettering {
+            width: 100%; 
+            height: 100%;
+
+            .backimg_active{
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: 0.5s;
+            }
+
+            :hover .backimg_active {
+                opacity: 1;
+            }
+        }
+
+        .massageBoard {
+            width: 100%; 
+            height: 100%; 
+            
+            .backimg_active{
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: 0.5s;
+            }
+
+            :hover .backimg_active {
+                opacity: 1;
+            }
+        }
+
+        .other {
+            width: 100%; 
+            height: 100%; 
+
+            .backimg_active{
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: 0.5s;
+            }
+
+            :hover .backimg_active {
+                opacity: 1;
+            }
+        }
+
+
+        /* 4段目（Online Shop, About）*/
+        .onlineShop {
+            width: 100%; 
+            height: 200px;
+        }
+        
+        .about {
+            width: 100%; 
+            height: 200px;
+            .title{
+                top: 30%;
+            }
+            .shop_text{
+                font-size: 25%;
+                line-height: 130%;
+                top: 60%;
+            }
+        }
+        
+    }
+
+}

@@ -1,0 +1,499 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/top.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+/*PCの場合*/
+.pc {
+  display: inline !important;
+}
+
+.mb {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  /*タブレット、スマホの場合*/
+  .pc {
+    display: none !important;
+  }
+
+  .mb {
+    display: inline !important;
+  }
+}
+/*PC
+-----------------------------------------*/
+header {
+  width: 100%;
+  /* 幅いっぱいを指定 */
+  height: 60px;
+  /* 高さを指定 */
+  padding: 10px 50px;
+  /* ヘッダーに上下左右それぞれ余白を指定 */
+  box-sizing: border-box;
+  /* padding分を含んで幅を100%にするため */
+  position: fixed;
+  /* ウィンドウを基準に画面に固定 */
+  top: 0;
+  /* 上下の固定位置を上から0pxにする */
+  left: 0;
+  /* 左右の固定位置を左から0pxにする */
+  align-items: center;
+  /* 中の要素を上下中央に並べる */
+  z-index: 10000000;
+  /*ページの一番上*/
+  background-color: black;
+  opacity: 0.5;
+}
+header .inner {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+header .inner .menuSection {
+  display: flex;
+  /* 中の要素を横並びにする */
+  float: left;
+}
+header .inner .menuSection .menu {
+  color: white;
+  font-size: 13px;
+  display: inline-block;
+  transition: all .3s ease 0s;
+  text-decoration: none;
+  margin-left: 40px;
+  text-align: center;
+  padding: 16px 0;
+}
+header .inner .menuSection .menu:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+header .outer {
+  position: relative;
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+header .outer .snsSection {
+  display: flex;
+  /* 中の要素を横並びにする */
+  float: right;
+}
+header .outer .snsSection .sns {
+  color: white;
+  font-size: 30px;
+  display: inline-block;
+  transition: all .3s ease 0s;
+  text-decoration: none;
+  margin-right: 30px;
+}
+header .outer .snsSection .sns:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/*iPad(横)・iPadPro
+-----------------------------------------*/
+@media only screen and (max-width: 1367px) {
+  header {
+    width: 100%;
+    /* 幅いっぱいを指定 */
+    height: 50px;
+    /* 高さを指定 */
+    padding: 10px 20px;
+    /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box;
+    /* padding分を含んで幅を100%にするため */
+    position: fixed;
+    /* ウィンドウを基準に画面に固定 */
+    top: 0;
+    /* 上下の固定位置を上から0pxにする */
+    left: 0;
+    /* 左右の固定位置を左から0pxにする */
+    align-items: center;
+    /* 中の要素を上下中央に並べる */
+    z-index: 10000000;
+    /*ページの一番上*/
+  }
+  header .inner {
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 100%;
+  }
+  header .inner .menuSection {
+    display: flex;
+    /* 中の要素を横並びにする */
+    float: left;
+  }
+  header .inner .menuSection .menu {
+    color: white;
+    font-size: 200%;
+    display: inline-block;
+    transition: all .3s ease 0s;
+    text-decoration: none;
+    margin-left: 45px;
+  }
+  header .inner .menuSection .menu:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  header .outer {
+    position: relative;
+    float: right;
+    width: 30%;
+    height: 100%;
+  }
+  header .outer .snsSection {
+    display: flex;
+    /* 中の要素を横並びにする */
+    float: right;
+  }
+  header .outer .snsSection .sns {
+    color: white;
+    font-size: 195%;
+    display: inline-block;
+    transition: all .3s ease 0s;
+    text-decoration: none;
+    margin-right: 40px;
+  }
+  header .outer .snsSection .sns:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+/*スマホ
+-----------------------------------------*/
+@media only screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    /* 幅いっぱいを指定 */
+    height: 60px;
+    /* 高さを指定 */
+    padding: 10px 50px;
+    /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box;
+    /* padding分を含んで幅を100%にするため */
+    position: fixed;
+    /* ウィンドウを基準に画面に固定 */
+    top: 0;
+    /* 上下の固定位置を上から0pxにする */
+    left: 0;
+    /* 左右の固定位置を左から0pxにする */
+    align-items: center;
+    /* 中の要素を上下中央に並べる */
+    z-index: 10000000;
+    /*ページの一番上*/
+    background-color: black;
+    opacity: 1;
+    /*　ハンバーガーボタン　*/
+  }
+  header .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 10000000;
+    left: 13px;
+    top: 12px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+    /* ナビ開いてる時のボタン */
+  }
+  header .hamburger span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 6px;
+    background: #555;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  header .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  header .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  header .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  header .hamburger.active span:nth-child(1) {
+    top: 16px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  header .hamburger.active span:nth-child(2),
+  header .hamburger.active span:nth-child(3) {
+    top: 16px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  header nav.globalMenuSp {
+    position: fixed;
+    z-index: 10000;
+    top: 5%;
+    left: 0;
+    background: black;
+    text-align: center;
+    transform: translateX(-100%);
+    transition: all 0.6s;
+    width: 100%;
+    height: 100%;
+    /* このクラスを、jQueryで付与・削除する */
+  }
+  header nav.globalMenuSp ul.menu {
+    text-align: center;
+    height: 60%;
+  }
+  header nav.globalMenuSp ul.menu li {
+    margin-top: 15%;
+  }
+  header nav.globalMenuSp ul.menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 160%;
+  }
+  header nav.globalMenuSp ul.sns {
+    display: flex;
+    height: 40%;
+  }
+  header nav.globalMenuSp ul.sns li {
+    margin: 20px auto;
+  }
+  header nav.globalMenuSp ul.sns li a {
+    display: block;
+    color: white;
+    padding: 1em 0;
+    text-decoration: none;
+    font-size: 180%;
+  }
+  header nav.globalMenuSp.active {
+    transform: translateX(0%);
+  }
+}
+.index {
+  /*PC
+  ---------------------------------------------------------*/
+  /*全体*/
+  /*モノクロ画像のサイズ*/
+  /*カラー画像のサイズ*/
+  /*スマホ
+  -----------------------------------------*/
+}
+.index .box {
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 60px;
+  border: none;
+  clear: both;
+}
+.index .backimg {
+  width: 100%;
+  height: 100%;
+}
+.index .backimg_active {
+  width: 100%;
+  height: 100%;
+}
+.index .title {
+  position: absolute;
+  /*絶対配置*/
+  color: white;
+  /*文字は白に*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  font-size: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .index {
+    /*全体*/
+    /*モノクロ画像のサイズ*/
+    /*カラー画像のサイズ*/
+    /* 1段目（サイトの顔） */
+    /* 2段目（Kustom Paint, Pinstripe）*/
+    /* 3段目（Lettering, Massage Board, Other）*/
+    /* 4段目（Online Shop, About）*/
+  }
+  .index .box {
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 100%;
+    font-weight: 20%;
+    font-size: 30px;
+    border: none;
+    clear: both;
+  }
+  .index .backimg {
+    width: 100%;
+    height: 100%;
+  }
+  .index .backimg_active {
+    width: 100%;
+    height: 100%;
+  }
+  .index .title {
+    position: absolute;
+    /*絶対配置*/
+    color: white;
+    /*文字は白に*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    font-size: 70%;
+  }
+  .index .top {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/top_sp.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  .index .kastomPaint {
+    width: 100%;
+    height: 100%;
+  }
+  .index .kastomPaint .backimg_active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+    /*画像が入れ替わる速度*/
+  }
+  .index .kastomPaint :hover .backimg_active {
+    opacity: 1;
+  }
+  .index .pinstripe {
+    width: 100%;
+    height: 100%;
+  }
+  .index .pinstripe .backimg_active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .index .pinstripe :hover .backimg_active {
+    opacity: 1;
+  }
+  .index .lettering {
+    width: 100%;
+    height: 100%;
+  }
+  .index .lettering .backimg_active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .index .lettering :hover .backimg_active {
+    opacity: 1;
+  }
+  .index .massageBoard {
+    width: 100%;
+    height: 100%;
+  }
+  .index .massageBoard .backimg_active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .index .massageBoard :hover .backimg_active {
+    opacity: 1;
+  }
+  .index .other {
+    width: 100%;
+    height: 100%;
+  }
+  .index .other .backimg_active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .index .other :hover .backimg_active {
+    opacity: 1;
+  }
+  .index .onlineShop {
+    width: 100%;
+    height: 200px;
+  }
+  .index .about {
+    width: 100%;
+    height: 200px;
+  }
+  .index .about .title {
+    top: 30%;
+  }
+  .index .about .shop_text {
+    font-size: 25%;
+    line-height: 130%;
+    top: 60%;
+  }
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-bottom: 5px;
+  float: left;
+  width: 100%;
+  height: 15px;
+  color: white;
+}
+
+/*スマホ
+-----------------------------------------*/
+@media only screen and (max-width: 768px) {
+  .copyright {
+    width: 100%;
+    height: 5%;
+    font-size: 10%;
+  }
+}
+.gallery {
+  margin-top: 100px;
+  text-align: center;
+}
+.gallery h1 {
+  color: white;
+  font-size: 100px;
+}
+.gallery p {
+  color: white;
+  font-size: 50px;
+  margin-top: 100px;
+  margin-bottom: 500px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -6,9 +6,13 @@ $tab_width : 1024px; //iPadmini(横)
 $phab_width : 768px; //iPadmini(縦)
 $sp_width : 414px; //スマホ
 
-// body{
-    
-// }
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/top.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+}
 
 /*PCの場合*/
 .pc	{ display:inline!important; }
@@ -24,3 +28,4 @@ $sp_width : 414px; //スマホ
 @import"./module/_layout/header";
 @import"./module/_layout/index";
 @import"./module/_layout/footer";
+@import"./module/_pages/gallery";
