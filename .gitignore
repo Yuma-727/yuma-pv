@@ -1,0 +1,5 @@
+# 「.sass-cache/」フォルダを除外
+.sass-cache/
+ai1wm-backups/
+languages/
+plugins/
