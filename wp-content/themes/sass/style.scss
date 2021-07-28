@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+$mac_width : 1500px; //MacBook・ノートPC
+$note_width : 1367px; //iPad(横)・iPadPro
+$tab_width : 1024px; //iPadmini(横)
+$phab_width : 768px; //iPadmini(縦)
+$sp_width : 414px; //スマホ
+
+// body{
+    
+// }
+
+/*PCの場合*/
+.pc	{ display:inline!important; }
+.mb	{ display:none!important; }
+@media screen and (max-width: 768px) {
+/*タブレット、スマホの場合*/
+.pc	{ display:none!important; }
+.mb { display:inline!important; }
+}
+
+
+
+@import"./module/_layout/header";
+@import"./module/_layout/index";
+@import"./module/_layout/footer";
