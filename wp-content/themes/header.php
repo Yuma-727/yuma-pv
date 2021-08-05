@@ -42,13 +42,7 @@
                 <nav class="globalMenuSp">
                     <ul class="menu">
                         <li><a href="<?php echo home_url() ?>">Top</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="<?php the_permalink(); ?>/online-shop">Online Shop</a></li>
-                    </ul>
-                    <ul class="sns">
-                        <li><a href="https://www.instagram.com/twentytwofour_mz/" target=”_blank”><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.facebook.com/twentytwofour.jp/" target=”_blank”><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCBV1CaGyPLNZpNXlkbo04yQ" target=”_blank”><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="<?php the_permalink(); ?>/gallery">Gallery</a></li>
                     </ul>
                 </nav>
         </header>
